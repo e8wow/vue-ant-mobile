@@ -1,0 +1,21 @@
+.vue-am-ripple-el {
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+  overflow: hidden;
+  will-change: box-shadow, transform;
+  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+  outline: none;
+  cursor: pointer;
+  border-radius: 100%;
+  transform: scale(0);
+  background-color: hsla(0, 0%, 62%, .2);
+  animation: ripple 1s linear;
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
